@@ -4,24 +4,37 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 00, 00, 00;
+  --background-end-rgb: 80, 00, 80;
+  --white: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --white: #ffffff;
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+*{
+  box-sizing: border-box;
+  color: black;
+  font-family: Roboto, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+html{
+  margin:0px;
+}
 body {
-  color: rgb(var(--foreground-rgb));
+  margin:0px;
+  color: rgb(var(--white));
   background: linear-gradient(
       to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
+      #1f520a
     )
     rgb(var(--background-start-rgb));
+    
 }
