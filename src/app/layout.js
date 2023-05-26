@@ -19,7 +19,11 @@ const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 });
-export default function RootLayout({ children }) {
+
+
+ 
+
+export default async function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
 
