@@ -21,15 +21,14 @@ const inter = Inter({
 });
 
 
- 
+
 
 export default async function RootLayout({ children }) {
   return (
-    <html lang="pt-BR">
-
-      <body className={inter.className}>
+    <html className={"w-[100%] h-[100%] bg-white pt-[96px]"} lang="pt-BR">
+      <body data-theme="mytheme" className={inter.className + ""}>
         <Header />
         {children}</body>
-    </html>
+    </html >
   )
 }
