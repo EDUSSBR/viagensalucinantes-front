@@ -18,8 +18,32 @@ module.exports = {
         md: '740px',
         lg: '1000px',
         xl: '1500px',
-      }
+      },
+
+      left: {
+        'calc-50-aviao': 'calc(50% - 20px)',
+      },
+
     },
   },
-  plugins: [],
+  daisyui: {
+    theme: true,
+    themes: [
+      {
+        mytheme: {
+          "primary": "#77c459",
+          "secondary": "#e68f56",
+          "accent": "#5EA4A3",
+          "neutral": "#3D4451",
+          "base-100": "#FFFFFF",
+          "info": "#3ABFF8",
+          "success": "#36D399",
+          "warning": "#FBBD23",
+          "error": "#F87272",
+        },
+      },
+      
+    ],
+  },
+  plugins: [require("daisyui")],
 }
