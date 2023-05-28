@@ -20,10 +20,6 @@ module.exports = {
         xl: '1500px',
       },
 
-      left: {
-        'calc-50-aviao': 'calc(50% - 20px)',
-      },
-
     },
   },
   daisyui: {
