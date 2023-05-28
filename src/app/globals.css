@@ -26,9 +26,11 @@
 }
 html{
   margin:0px;
+  height:100%;
 }
 body {
   margin:0px;
+  min-height: 100vh;
   color: rgb(var(--white));
   background: linear-gradient(
       to bottom,
