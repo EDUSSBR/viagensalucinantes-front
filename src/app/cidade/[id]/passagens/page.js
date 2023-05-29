@@ -43,6 +43,7 @@ export default function PassagemPage({ params }) {
             setHideDialog(false)
         }, 5000)
 }, [params.id])
+
 return (<main className='h-[100%] w-[100%] flex gap-4 mx-auto mb-10'>
 
     <div className='drawer  w-[100%]'>
