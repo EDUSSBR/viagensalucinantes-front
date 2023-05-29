@@ -57,7 +57,7 @@ export default function HoteisPage({ params }) {
 
 
                     <div className='flex flex-row gap-4 flex-wrap justify-center align-center w-[100%] '>
-                        {hoteisFiltrados?.length > 0 && hoteisFiltrados.map(item => (<div className="relative card w-60 h-80 bg-base-100 shadow-2xl pt-10">
+                        {hoteisFiltrados?.length > 0 && hoteisFiltrados.map(item => (<div key={item.hotelID} className="relative card w-60 h-80 bg-base-100 shadow-2xl pt-10">
                             <Image className='absolute top-6 left-[50px]' src="/hotel2.png" alt="aviao-icon" width={150} height={150} />
                             <div className="card-body text-xs items-center text-center mt-[55px]">
                                 {/* <p className="">Data de saída: {item.data_hora_partida}</p> */}
