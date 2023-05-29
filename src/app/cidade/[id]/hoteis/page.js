@@ -18,7 +18,7 @@ export default function HoteisPage({ params }) {
             return hoteis
         }
         return hoteis.filter(item => Number(item?.precoMaximo) >= Number(minPreco) && Number(item?.precoMinimo) <= maxPreco)
-    }, [minPreco, maxPreco, hoteis])
+    }, [minPreco, maxPreco, valorMinimo, valorMaximo, hoteis])
     useEffect(() => {
         (async function getCidades() {
             const res = await fetch(`${process.env.NEXT_PUBLIC_BACK_END_BASE_URL}/cidades/${params.id}/hoteis`, { cache: 'no-store' });
@@ -32,7 +32,7 @@ export default function HoteisPage({ params }) {
         setTimeout(()=>{
         localStorage.setItem("first-time-hoteis", true)
         setHideDialog(false)},5000)
-    }, [])
+    }, [params.id])
 
     function handleDetalhes(hotelID){
         router.push(`/cidade/${params.id}/hoteis/${hotelID}`)

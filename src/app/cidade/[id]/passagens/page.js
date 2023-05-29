@@ -15,7 +15,7 @@ export default function PassagemPage({ params }) {
             return passagens
         }
         return passagens.filter(item => Number(item?.preco) >= Number(minPreco) && Number(item?.preco) <= maxPreco)
-    }, [minPreco, maxPreco, passagens])
+    }, [minPreco, maxPreco,valorMaximo, valorMinimo, passagens])
     useEffect(() => {
         (async function getCidades() {
             const res = await fetch(`${process.env.NEXT_PUBLIC_BACK_END_BASE_URL}/cidades/${params.id}/passagens`, { cache: 'no-store' });
@@ -42,7 +42,7 @@ export default function PassagemPage({ params }) {
             localStorage.setItem("first-time-passagens", true)
             setHideDialog(false)
         }, 5000)
-}, [])
+}, [params.id])
 return (<main className='h-[100%] w-[100%] flex gap-4 mx-auto mb-10'>
 
     <div className='drawer  w-[100%]'>

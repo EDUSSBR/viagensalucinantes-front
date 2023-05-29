@@ -1,17 +1,17 @@
 'use client';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect,  useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 export default function hotelInfoPage({ params }) {
-    const [hotelInfo, setHotelInfo] = useState([])
-    useEffect(() => {
-        (async function getCidades() {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_BACK_END_BASE_URL}/cidades/${params.id}/hotelInfo`, { cache: 'no-store' });
-            const json = await res.json();
-            setHotelInfo(() => json)
-        })()
+    // const [hotelInfo, setHotelInfo] = useState([])
+    // useEffect(() => {
+    //     (async function getCidades() {
+    //         const res = await fetch(`${process.env.NEXT_PUBLIC_BACK_END_BASE_URL}/cidades/${params.id}/hotelInfo`, { cache: 'no-store' });
+    //         const json = await res.json();
+    //         setHotelInfo(() => json)
+    //     })()
 
-    }, [])
+    // }, [])
     return (<main className='h-[100%] w-[100%] flex  flex-column justify-center p-[40px] flex-wrap '>           
             <Link href={`/`}><Image className='absolute top-[110px] right-4' src="/home-icon.png" alt="home-icon" width={40} height={40} /></Link>
             <Link href={`/cidade/${params.id}/hoteis`}><Image className='absolute top-[155px] right-4' src="/hotel-icon.png" alt="hotel-icon" width={40} height={40} /></Link>
