@@ -25,19 +25,19 @@ export default function Home() {
   }
   return (
     <main className="h-[100%] w-[100%]  flex pb-10 flex-col items-center   line-clamp-10 relative px-3">
-      <Image className='hidden md:block md:w-fit absolute top-0 left-0 ' src="/foto-inicial.jpg" width="1500" height="1500" alt="imagem inicial" />
+      <Image className='hidden md:block md:w-full h-full absolute top-0 left-0 ' src="/foto-inicial1.jpg" width="2000" height="2000" alt="imagem inicial" />
 
-      <div className='flex flex-col md:mt-[96px] w-[100%] mx-auto my-[25px] max-w-sm md:max-w-md  h-[100%]  bg-slate-100 rounded-lg p-3 opacity-80 '>
-        <p className='mx-auto text-lg mb-2'>Venha conhecer os melhores destinos</p>
+      <div className='flex flex-col md:mt-[96px] w-[100%] mx-auto my-[25px] max-w-sm md:max-w-md  h-[100%]  bg-slate-100  rounded-lg p-3 opacity-80 '>
+        <p className='mx-auto text-lg mb-2 text-slate-800'>Venha conhecer os melhores destinos</p>
         <form className='mx-auto w-full flex flex-col align-center'>
-          <label htmlFor="cidades" className='mx-auto mb-2'>Procure uma cidade:</label>
+          <label htmlFor="cidades" className='mx-auto mb-2 text-slate-800'>Procure uma cidade:</label>
           <div className=' flex flex-col align-center'>
             <input
               value={cidadeInputFiltro}
               onChange={(e) => setCidadeInputFiltro(e.target.value)}
               type="text"
               placeholder="Digite o nome de uma cidade..."
-              className='placeholder:text-black rounded-md bg-white text-[#310404] h-15 outline-none focus:border-primary selection:bg-[#061406] selection:text-white  border-2  p-2 mb-4' />
+              className=' placeholder:text-black rounded-md bg-white text-[#310404] h-15 outline-none focus:border-accent selection:bg-[#061406] selection:text-white  border-2  p-2 mb-4' />
           </div>
         </form>
       </div>
@@ -50,15 +50,15 @@ export default function Home() {
       </div>
       <div className='flex  md:overflow-y-scroll  flex-col w-[100%] h-fit md:h-[600px] mx-auto   max-w-[600px]  bg-slate-100 rounded-lg p-3 opacity-80 '>
         <p className='mx-auto text-lg mb-2'>Cidades encontradas:</p>
-        <table className="h-[100%] table-auto  md-max-h-[600px] rounded-md ">
-          <thead className='px-[3px] rounded-md bg-[#33383D] opacity-100    mb-20'>
+        <table className=" table-auto  md-max-h-[600px] rounded-md ">
+          <thead className='px-[3px] rounded-md bg-[#33383D] mb-20'>
             <tr className='  rounded-md'>
               <th className='md:p-1   rounded-l-md text-white'>Cidade</th>
               <th className='w-1/4  md:p-1   rounded-r-md  text-white'>Estado</th>
             </tr>
           </thead>
           <tbody >
-            {cidadesFiltradas.map(item => (<tr onClick={() => handleCidade(item.id)} key={item.id} className='hover:px-[3px] hover:rounded-md  hover:bg-primary cursor-pointer '>
+            {cidadesFiltradas.map(item => (<tr  onClick={() => handleCidade(item.id)} key={item.id} className='hover:px-[3px] hover:rounded-md  hover:bg-primary cursor-pointer '>
               <td className=' md:p-1 rounded-l-md text-center'>{item.cidade}</td>
               <td className='w-1/4  md:p-1 rounded-r-md text-center'>{item.estado}</td>
             </tr>))}

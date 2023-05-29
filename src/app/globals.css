@@ -20,13 +20,17 @@
 *{
   box-sizing: border-box;
   color: black;
-  font-family: Roboto, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Roboto', 'Haettenschweiler', 'Arial Narrow Bold', 'sans-serif';
+  
   font-size: 16px;
   font-weight: 800;
 }
 html{
   margin:0px;
   height:100%;
+}
+svg{
+  fill:#136968;
 }
 body {
   margin:0px;
@@ -35,7 +39,7 @@ body {
   background: linear-gradient(
       to bottom,
       transparent,
-      #1f520a
+      #92D07A
     )
     rgb(var(--background-start-rgb));
     
